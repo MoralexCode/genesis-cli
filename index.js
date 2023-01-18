@@ -2,8 +2,10 @@
 
 // require('./utils/global');
 import './utils/global.js';
+
 // import logSymbols from "log-symbols";
 import meow from 'meow';
+import {debug} from './utils/debug.js';
 import {helperText, options} from './utils/helper.js';
 import {welcome} from './utils/welcome.js';
 welcome();
@@ -11,7 +13,12 @@ welcome();
 const cli = meow(helperText, options);
 const input = cli.input;
 const flags = cli.flags;
-console.log(input, flags);
+(async () => {
+	input.includes('help') && cli.showHelp(0);
+	//Debug info if nedeed.
+	debug(flags.debug, input, flags);
+})();
+// console.log(input);
 // const commands = {
 //   new: { desc: `Creates a new user account` },
 //   duplicate: { desc: `Duplicates a user account` },

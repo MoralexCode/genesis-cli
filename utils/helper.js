@@ -6,12 +6,11 @@ export const helperText = `
 
 	${bold(`Options`)}
         
-		${yellow(`--social      Show social information`)}
-		${yellow(`--no-social   Don´t social information`)}
+		${yellow(`-n , --name      	Name of new project`)}
+		${yellow(`-r , --repo      	URL to repocitory`)}
+		${yellow(`-m , --model     	List of models to create`)}
 		${yellow(`--ad          Show ad information`)}
-		${yellow(`--no-ad       Don´t ad information`)}
 		${yellow(`-d, --debug   Show debug information `)}
-		${yellow(`-v, --version Show CLI version  information `)}
 		${yellow(`-p, --posts    Show last 10 blog  POST `)}
 		${yellow(`-m, --minimal Show minimal information `)} ${dim(`DEFAULT : false`)}
 		${yellow(`-c, --clear   Clear the console information `)}
