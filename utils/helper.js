@@ -1,5 +1,3 @@
-import chalk from 'chalk';
-export const {green, yellow, cyan, dim, bold} = chalk;
 export const helperText = `
 	${bold(`Usage`)}
 		${green(`npx genesiscli`)} ${yellow(`[options]`)} ${cyan(`<commands>`)}

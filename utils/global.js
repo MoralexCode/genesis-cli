@@ -1,19 +1,23 @@
 // 'use strict';
 import boxen from 'boxen';
 import chalk from 'chalk';
-export const {green, cyan, yellow, dim} = chalk;
+import enquirer from 'enquirer';
+import {execa} from 'execa';
+import ora from 'ora';
+import copy from 'copy-template-dir';
+import path from 'path';
+const {prompt, Confirm} = enquirer;
+export const {green, cyan, yellow, dim, bold} = chalk;
 
 global.green = green;
 global.cyan = cyan;
 global.yellow = yellow;
 global.dim = dim;
+global.bold = bold;
 global.boxen = boxen;
-
-// module.exports = global.cyan = cyan;
-// module.exports = global.print = print;
-// module.exports = global.send = send;
-// module.exports = global.sendError = sendError;
-
-// module.exports = global.yellow = yellow;
-// module.exports = global.cyan = cyan;
-// module.exports = global.dim = dim;
+global.ora = ora;
+global.prompt = prompt;
+global.Confirm = Confirm;
+global.execa = execa;
+global.copy = copy;
+global.path = path;

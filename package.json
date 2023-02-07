@@ -1,35 +1,38 @@
 {
-  "name": "genesis-cli",
-  "version": "1.0.0",
-  "description": "It´s a CLI app to  Create NodeJS projects like a boos ",
-  "main": "index.js",
-  "type": "module",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "bin": {
-    "genesiscli": "index.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/MoralexCode/genesis-cli.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/MoralexCode/genesis-cli/issues"
-  },
-  "homepage": "https://github.com/MoralexCode/genesis-cli#readme",
-  "dependencies": {
-    "boxen": "^7.0.1",
-    "chalk": "^5.2.0",
-    "clear-any-console": "^1.16.2",
-    "cli-alerts": "^1.2.2",
-    "enquirer": "^2.3.6",
-    "log-symbols": "^5.1.0",
-    "meow": "^11.0.0",
-    "meow-help": "^0.3.0",
-    "ora": "^6.1.2"
-  }
+	"name": "genesis-cli",
+	"version": "1.0.0",
+	"description": "It´s a CLI app to  Create NodeJS projects like a boos ",
+	"main": "index.js",
+	"type": "module",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"bin": {
+		"genesiscli": "index.js",
+		"genesis": "index.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/MoralexCode/genesis-cli.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/MoralexCode/genesis-cli/issues"
+	},
+	"homepage": "https://github.com/MoralexCode/genesis-cli#readme",
+	"dependencies": {
+		"boxen": "^7.0.1",
+		"chalk": "^5.2.0",
+		"clear-any-console": "^1.16.2",
+		"cli-alerts": "^1.2.2",
+		"copy-template-dir": "^1.4.0",
+		"enquirer": "^2.3.6",
+		"execa": "^6.1.0",
+		"log-symbols": "^5.1.0",
+		"meow": "^11.0.0",
+		"meow-help": "^0.3.0",
+		"ora": "^6.1.2"
+	}
 }

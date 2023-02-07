@@ -7,15 +7,15 @@ export const debug = (isDebug, input, flags) => {
 	alert({type: 'warning', msg: `DEBUGGING INFO`});
 
 	log(
-		boxen(`🔥  ${cyan(input)} 😎`, {
-			title: 'Input',
+		boxen(` ${cyan(input)} `, {
+			title: 'Input ⌨️',
 			titleAlignment: 'center',
 			borderStyle: 'double'
 		})
 	);
 	log(
-		boxen(`🔥  ${cyan(JSON.stringify(flags))} `, {
-			title: 'Flags',
+		boxen(` ${cyan(JSON.stringify(flags))} `, {
+			title: 'Flags ⚐',
 			titleAlignment: 'center',
 			borderStyle: 'double'
 		})
