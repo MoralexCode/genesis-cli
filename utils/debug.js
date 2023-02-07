@@ -1,5 +1,5 @@
 import boxen from 'boxen';
-import alert from 'cli-alerts';
+
 const log = console.log;
 export const debug = (isDebug, input, flags) => {
 	if (!isDebug) return;

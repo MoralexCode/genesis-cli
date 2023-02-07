@@ -1,10 +1,11 @@
 // 'use strict';
 import boxen from 'boxen';
 import chalk from 'chalk';
+import alert from 'cli-alerts';
+import copy from 'copy-template-dir';
 import enquirer from 'enquirer';
 import {execa} from 'execa';
 import ora from 'ora';
-import copy from 'copy-template-dir';
 import path from 'path';
 const {prompt, Confirm} = enquirer;
 export const {green, cyan, yellow, dim, bold} = chalk;
@@ -21,3 +22,4 @@ global.Confirm = Confirm;
 global.execa = execa;
 global.copy = copy;
 global.path = path;
+global.alert = alert;

@@ -1,3 +1,11 @@
 {
-	"name": "{{name}}"
+	"name": "{{name}}",
+	"description": "{{description}}",
+	"main": "{{name}}.js",
+	"version": "{{version}}",
+	"author": "{{author}}",
+	"license": "ISC",
+	"scripts": {
+		"start": "nodemon {{name}}.js"
+	}
 }
