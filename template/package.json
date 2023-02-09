@@ -6,6 +6,7 @@
 	"author": "{{author}}",
 	"license": "ISC",
 	"scripts": {
-		"start": "nodemon {{name}}.js"
+		"start": "nodemon {{name}}.js",
+		"format": "prettier --write \"./**/*.{js,json}\""
 	}
 }
