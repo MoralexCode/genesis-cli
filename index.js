@@ -6,6 +6,7 @@ import './utils/global.js';
 import meow from 'meow';
 import {ask} from './utils/ask.js';
 import {debug} from './utils/debug.js';
+import {dependencies} from './utils/dependencies.js';
 import {helperText, options} from './utils/helper.js';
 import {welcome} from './utils/welcome.js';
 welcome();
@@ -52,14 +53,8 @@ const flags = cli.flags;
 			});
 			spinner.succeed(`Creating files It's done!
 				\n${createdFiles.length} files created in ${dim(`./${projectDirName}`)} directory.`);
+			await dependencies(outDir);
 
-			process.chdir(outDir);
-			const spinner2 = ora(
-				`Installing dependencies ...\n\n ${dim(`It may take moment...`)}`
-			).start();
-			const pkgs = ['sequelize', 'mysql2', 'boxen', 'winston', 'express'];
-			await execa('npm', [`install`, ...pkgs]);
-			spinner2.succeed(`Dependencies installed.`);
 			alert({
 				type: 'success',
 				name: `All done`,

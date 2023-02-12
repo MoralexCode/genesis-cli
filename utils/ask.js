@@ -1,6 +1,6 @@
 import fs from 'fs';
-export const ask = async () => {
-	return await prompt([
+export const ask = () => {
+	return prompt([
 		{
 			type: 'input',
 			name: 'name',
@@ -25,7 +25,8 @@ export const ask = async () => {
 		{
 			type: 'input',
 			name: 'author',
-			message: 'Author name?'
+			message: 'Author name?',
+			initial: 'MoralexCode'
 		}
 	]);
 };
