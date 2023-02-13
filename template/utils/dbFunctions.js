@@ -4,7 +4,8 @@ const dbModel = require('../app/models/index');
 const DB = {};
 
 DB.findOne = async (model, id) => {
-	return await dbModel[model].findOne({where: {id, enable: 1}}).then(data => {
+	const where = {id, enable: 1};
+	return await dbModel[model].findOne({where}).then(data => {
 		return data;
 	});
 };
@@ -42,11 +43,10 @@ DB.findAllCustomQuery = async (model, query) => {
 };
 
 DB.update = async (model, paylod, id) => {
-	return await dbModel[model]
-		.update(paylod, {where: {id}})
-		.then(([rowAffected, rowsUpdate, data]) => {
-			return rowAffected;
-		});
+	const where = {id};
+	return await dbModel[model].update(paylod, {where}).then(([rowAffected, rowsUpdate, data]) => {
+		return rowAffected;
+	});
 };
 
 DB.create = async (model, paylod) => {
@@ -61,8 +61,9 @@ DB.bulkCreate = async (model, paylod) => {
 };
 //Change the status, (logic deleted)
 DB.delete = async (model, id) => {
+	const where = {id};
 	return await dbModel[model]
-		.update({enable: 0}, {where: {id}})
+		.update({enable: 0}, {where})
 		.then(([rowAffected, rowsUpdate, data]) => {
 			return rowAffected;
 		});

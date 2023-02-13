@@ -9,6 +9,7 @@ export const ask = () => {
 			name: 'name',
 			message: 'What is your project name?',
 			hint: `(use kebab-case only)`,
+			initial: 'nodejsproject',
 			history: {
 				autsaving: true,
 				store: new Store({
@@ -29,6 +30,7 @@ export const ask = () => {
 		{
 			type: 'input',
 			name: 'description',
+			initial: 'Test Description',
 			message: 'Write a description project'
 		},
 		{

@@ -6,10 +6,7 @@ const usersModel = '{{name}}_users',
 	encrypt = require('../../utils/encryptPassword');
 const controllerName = 'usersController';
 //+-----------------------------------------------------------------------------+
-//|                                                                             |
-//|                                                                             |
-//|CREATE NEW users                                                                |
-//|                                                                             |
+//|CREATE NEW users                                                             |
 //+-----------------------------------------------------------------------------+
 usersController.create = async (req, res) => {
 	try {
@@ -23,10 +20,7 @@ usersController.create = async (req, res) => {
 	}
 };
 //+-----------------------------------------------------------------------------+
-//|                                                                             |
-//|                                                                             |
-//|FIND  users BY ID                                                          |
-//|                                                                             |
+//|FIND  users BY ID                                                            |
 //+-----------------------------------------------------------------------------+
 usersController.read = async (req, res) => {
 	try {
@@ -42,10 +36,7 @@ usersController.read = async (req, res) => {
 };
 
 //+-----------------------------------------------------------------------------+
-//|                                                                             |
-//|                                                                             |
-//|GET LIST OF users CUSTOM QUERY                                            |
-//|                                                                             |
+//|GET LIST OF users CUSTOM QUERY                                               |
 //+-----------------------------------------------------------------------------+
 usersController.readAll = async (req, res) => {
 	try {
@@ -57,10 +48,7 @@ usersController.readAll = async (req, res) => {
 	}
 };
 //+-----------------------------------------------------------------------------+
-//|                                                                             |
-//|                                                                             |
-//|UPDATE   users  BY ID                                                       |
-//|                                                                             |
+//|UPDATE   users  BY ID                                                        |
 //+-----------------------------------------------------------------------------+
 usersController.update = async (req, res) => {
 	const {id} = req.params;
@@ -74,10 +62,7 @@ usersController.update = async (req, res) => {
 	}
 };
 //+-----------------------------------------------------------------------------+
-//|                                                                             |
-//|                                                                             |
-//|DELETE   users  BY ID                                                      |
-//|                                                                             |
+//|DELETE   users  BY ID                                                        |
 //+-----------------------------------------------------------------------------+
 usersController.delete = async (req, res) => {
 	const {id} = req.params;
@@ -91,10 +76,7 @@ usersController.delete = async (req, res) => {
 };
 
 //+-----------------------------------------------------------------------------+
-//|                                                                             |
-//|                                                                             |
 //| user LOGIN                                                                  |
-//|                                                                             |
 //+-----------------------------------------------------------------------------+
 usersController.login = async (req, res) => {
 	try {
@@ -126,10 +108,7 @@ usersController.login = async (req, res) => {
 	}
 };
 //+-----------------------------------------------------------------------------+
-//|                                                                             |
-//|                                                                             |
 //|VALIDATE IF USER EXIST                                                       |
-//|                                                                             |
 //+-----------------------------------------------------------------------------+
 
 const validateUser = async (email, password, firebase_token, func) => {
@@ -141,31 +120,7 @@ const validateUser = async (email, password, firebase_token, func) => {
 };
 
 //+-----------------------------------------------------------------------------+
-//|                                                                             |
-//|                                                                             |
-//|UPDATE FIREBASE TOKEN AT  USER                                               |
-//|                                                                             |
-//+-----------------------------------------------------------------------------+
-async function updateUser(email, firebase_token) {
-	usersModel.update({firebase_token: firebase_token}, {where: {email}}).then(rowAffected => {
-		if (rowAffected > 0)
-			log(
-				controllerName,
-				'rowAffected | ' + rowAffected + ' Firebase token  User updated successfully.'
-			);
-		else
-			log(
-				controllerName,
-				'rowAffected | ' + rowAffected + ' Firebase token  User updated Falied.'
-			);
-	});
-}
-
-//+-----------------------------------------------------------------------------+
-//|                                                                             |
-//|                                                                             |
 //|FIND USER                                                                    |
-//|                                                                             |
 //+-----------------------------------------------------------------------------+
 async function findUser(email, password) {
 	const where = {email, password, enable: 1};

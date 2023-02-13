@@ -8,4 +8,5 @@ echo "<<========Start Process ======>>"
 # docker compose up -d
 docker compose build
 docker compose run --rm {{name}}  npm run init 
+docker compose run --rm nodejsproject  npm run test:watch 
 docker compose logs
