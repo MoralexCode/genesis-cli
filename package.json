@@ -1,14 +1,21 @@
 {
 	"name": "genesis-cli",
-	"version": "1.0.0",
+	"version": "1.0.3",
 	"description": "It´s a CLI app to  Create NodeJS projects like a boos ",
 	"main": "index.js",
 	"type": "module",
+	"files": [
+		"index.js",
+		"utils",
+		"template",
+		".github"
+	],
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"format": "prettier --write \"./**/*.{js,json}\""
 	},
 	"bin": {
+		"genesis-cli": "index.js",
 		"genesiscli": "index.js",
 		"genesis": "index.js"
 	},

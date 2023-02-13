@@ -4,11 +4,13 @@ import './utils/global.js';
 
 // import logSymbols from "log-symbols";
 import meow from 'meow';
+import path from 'path';
 import {ask} from './utils/ask.js';
 import {debug} from './utils/debug.js';
 import {dependencies} from './utils/dependencies.js';
 import {helperText, options} from './utils/helper.js';
 import {welcome} from './utils/welcome.js';
+const __dirname = path.resolve();
 welcome();
 const cli = meow(helperText, options);
 const input = cli.input;
@@ -41,7 +43,7 @@ const flags = cli.flags;
 		const spinner = ora('Creating files...\n').start();
 		const vars = response;
 		const projectDirName = response.name;
-		const inDir = path.join(process.cwd(), `template`);
+		const inDir = path.join(__dirname, `template`);
 		const outDir = path.join(process.cwd(), projectDirName);
 		copy(inDir, outDir, vars, async (err, createdFiles) => {
 			spinner.color = 'yellow';

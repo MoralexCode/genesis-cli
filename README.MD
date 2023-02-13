@@ -23,10 +23,10 @@ To create a NodeJS project, you can follow these steps:
 
 ```sh
 # Recommended.
-npx genesiscli
+npx genesis-cli
 
 # OR an alternative global install.
-npm install -g genesiscli
+npm install -g genesis-cli
 ```
 
 <br>
