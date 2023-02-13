@@ -1,6 +1,6 @@
 const supertest = require('supertest');
 const assert = require('assert');
-const {app, server} = require('../task-master');
+const {app, server} = require('../{{name}}');
 const api = supertest(app);
 const {credentials, contentType} = require('./helper');
 const auth = {};
