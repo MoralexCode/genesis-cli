@@ -1,7 +1,7 @@
 {
 	"name": "genesis-cli",
-	"version": "1.0.3",
-	"description": "It´s a CLI app to  Create NodeJS projects like a boos ",
+	"version": "1.0.5",
+	"description": "It´s a CLI app to  Create NodeJS projects like a boss ",
 	"main": "index.js",
 	"type": "module",
 	"files": [
@@ -23,7 +23,15 @@
 		"type": "git",
 		"url": "git+https://github.com/MoralexCode/genesis-cli.git"
 	},
-	"keywords": [],
+	"keywords": [
+		"create-node-cli",
+		"Create Node.js CLI",
+		"Build Node CLI",
+		"node cli",
+		"nodejs",
+		"MoralexCode",
+		"Oscar Morales"
+	],
 	"author": "",
 	"license": "ISC",
 	"bugs": {

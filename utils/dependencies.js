@@ -1,5 +1,7 @@
+import path from 'path';
+const __dirname = path.dirname(new URL(import.meta.url).pathname);
 export const dependencies = async path => {
-	await execa('cp', [`${process.cwd()}/template/.github/personal-brand.png`, `${path}/.github/`]);
+	await execa('cp', [`${__dirname}/../template/.github/personal-brand.png`, `${path}/.github/`]);
 
 	process.chdir(path);
 	// const spinner = ora(`Installing dependencies ...\n\n ${dim(`It may take moment...`)}`).start();
